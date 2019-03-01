@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="node_modules/font-awesome/css/font-awesome.css/" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="Styles.css" rel="stylesheet"/>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/chart.js/dist/Chart.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: rgba(236, 233, 233, 0.6)">
+            <a class="navbar-band" href="index.html">
+                <img src="images/ng.png" style="width: 60px; color: black" alt="Nigeria">
+                Nigeria Tourism
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id=mynav>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="destinations.htm">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="states.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+            
+                </ul>
+
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="search"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button class="btn btn-warning my-2 my-sm-0">Search</button>
+                </form>
+
+            </div>   
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 pb-3" style="background:#e0dada;">
+                    <div class="row">
+                        <div class="col-11 text-white text-center mx-2 pb-2 pt-2 font-weight-bold" style="background:#a39e9e; font-family:'Arial Narrow Bold',san sarif">
+                            PROCUREMENT MANAGER
+                        </div>
+
+                        <div class="col-12 text-center mt-2">
+                            <img src=images/user.png width="120" alt="user">
+                        </div>
+                        <div class="col-12 text-center pt-2 pb-2 font-weight-bold" style="font-family:Verdana, Geneva, Tahoma, sans-serif">John Smith</div>
+                        
+                        <div class="col-12 text-center pt-2 pb-2" style="font-family:Arial, Helvetica, sans-serif">KEY MEASURE</div>
+                        <div class="col-12 mb-2">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Managed Suppliers
+                                    <span class="badge badge-secondary" style="font-size:13px;">67</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Managed Spending
+                                        <span class="badge badge-secondary" style="font-size:13px;">$ 240k</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">New Contact
+                                        <span class="badge badge-secondary" style="font-size:13px;">15</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Value Added
+                                        <span class="badge badge-secondary" style="font-size:13px;">$ 16k</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-12 text-center pt-2 pb-2" style="font-family:Arial, Helvetica, sans-serif">KEY ACTIONS</div>
+                        <div class="col-12 mb-2">
+                            <ul class="list-group" style="font-size:13px;">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Renew partner contract with discountrate lower than 5%</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Register top 5 unlisted suppliers</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">Reach compliances Agreement with big company LLC</li>     
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 pt-0 pb-2" style="background-color:#e9e6e6">
+                            <div class="row mt-2">
+                                <div class="col-6 text-left">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="myDropdownMenuButton" data-toggle="dropdown">
+                                            All Button
+                                        </button>
+                                            <div class="dropdown-menu">
+                                                <a href="#" class="dropdown-item">East</a>
+                                                <a href="#" class="dropdown-item">West</a>
+                                                <a href="#" class="dropdown-item">North</a>
+                                                <a href="#" class="dropdown-item">South</a>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="myDropdownMenuButton" data-toggle="dropdown">
+                                                All Button
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a href="#" class="dropdown-item">2019</a>
+                                                <a href="#" class="dropdown-item">2018</a>
+                                                <a href="#" class="dropdown-item">2017</a>
+                                                <a href="#" class="dropdown-item">2016</a>
+                                                <a href="#" class="dropdown-item">2015</a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold" style="background-color:#718d97; 
+                        font-size: 'Lucida sans', 'Lucida sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 'Verdana',sans-serif">
+                            SUPPLIER COMPLIANCE STAT
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-lg-4 border-right">
+                                    <div class="text-center mb-0"><h4>Suppliers</h4></div>
+                                    <div class="mt-0 pb-1">
+                                        <canvas id="supplierChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-8 mt-1">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>
+                                                <div class="text-center">
+                                                    <h6 class="m-0" style="color:#aaa3a3">5 year trend</h6>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Spending</td>
+                                            <th>$2,113,507</th>
+                                            <td>
+                                                <canvas id="totalSpendingChart" width="100" height="20"></canvas>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Savings</td>
+                                            <th>$2,113,507</th>
+                                            <td>
+                                                <canvas id="savingChart" width="100" height="20"></canvas>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Foregone Savings</td>
+                                            <th>$2,113,507</th>
+                                            <td>
+                                                <canvas id="foregoneSavings" width="100" height="20"></canvas>
+                                            </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12">
+                            <table class="table">
+                                <tr>
+                                    <th>Category & Top Supplier</th>
+                                    <th># Supplier</th>
+                                    <th>Share of Managed Suppliers</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0056
+                                    </td>
+                                    <td class="text-center">
+                                        610
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width:75%">75%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0081
+                                    </td>
+                                    <td class="text-center">
+                                        51
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-warning text-dark" role="progressbar" style="width:47%">47%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0242
+                                    </td>
+                                    <td class="text-center">
+                                            15
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width:63%">63%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0056
+                                    </td>
+                                    <td class="text-center">
+                                        20
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width:36%">36%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0056
+                                    </td>
+                                    <td class="text-center">
+                                        8255
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-dark text-white progress-bar-striped" role="progressbar" style="width:71%">71%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Category 1</b><br>
+                                        Supplier 0056
+                                    </td>
+                                    <td class="text-center">
+                                        8255
+                                    </td>
+                                    <td>
+                                        <div class="progress" style="height:24px;">
+                                            <div class="progress-bar bg-light text-dark progress-bar-striped" role="progressbar" style="width:71%">71%</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-3" style="background:#e0dada;">
+                <div class="row">
+                    <div class="col-lg-12 mt-1 pb-1 border-bottom border-light">
+                        <div class="col-12 my-1">
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="fa fa-star-o p-2" style="background-color:#eeeb4b;border-radius:15px;"></i>
+                                </div>
+                                
+                                <div class="col-3">8</div>
+                                <div class="col-6">Gold partner</div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-1">
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="fa fa-star-o p-2" style="background-color:#dddddd;border-radius:15px;"></i>
+                                 </div>
+                                    
+                                <div class="col-3">51</div>
+                                <div class="col-6">Siver Partner</div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-1">
+                                <div class="row">
+                                <div class="col-3">
+                                    <i class="fa fa-star-o p-2" style="background-color:#cd7f32;border-radius:15px;"></i>
+                                </div>
+                                        
+                                <div class="col-3">600</div>
+                                <div class="col-6">Bronze Partner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <h6 class="text-center mt-1">AVG. PROCUREMENT CYCLE</h6>
+                    </div>
+                    <div class="col-lg-12">
+                        <canvas id="procurememtCycleChart" width="220" height="100"></canvas>
+                    </div>
+                    <div class="col-lg-12 pt-2">
+                        <div class="accordion" id="myAccordion">
+                            <div class="card">
+                                <div class="card-header bg-secondary" id="firstHeading">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#firstBox">Sales 2019</button>
+                                    </h2>
+                                </div>
+                                <div id="firstBox" class="collapse show" data-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Sales</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>East</td>
+                                                    <td>77,391</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>West</td>
+                                                    <td>91,510</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>North</td>
+                                                    <td>231,209</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>South</td>
+                                                    <td>8,873</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header bg-secondary" id="secondHeading">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#secondBox">Sales 2018</button>
+                                    </h2>
+                                </div>
+                                <div id="secondBox" class="collapse show" data-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Sales</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>East</td>
+                                                    <td>77,391</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                    </tr>
+                                                <tr>
+                                                    <td>West</td>
+                                                    <td>91,510</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>North</td>
+                                                    <td>231,209</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>South</td>
+                                                    <td>8,873</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-secondary" id="thirdHeading">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#thirdBox">Sales 2017</button>
+                                    </h2>
+                                </div>
+                                <div id="thirdBox" class="collapse show" data-parent="#myAccordion">
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Region</th>
+                                                    <th>Sales</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>East</td>
+                                                    <td>77,391</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                    </tr>
+                                                <tr>
+                                                    <td>West</td>
+                                                    <td>91,510</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>North</td>
+                                                    <td>231,209</td>
+                                                    <td><i class="fa fa-arrow-circle-up"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>South</td>
+                                                    <td>8,873</td>
+                                                    <td><i class="fa fa-arrow-circle-down"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+    <script>
+        //chart 1
+        var ctx1 = document.getElementById("supplierChart");
+        var data1 = {
+            datasets:[{
+                data:[61,39],
+                backgroundColor:["#a0f47f","#f7838d"]
+            }],
+            labels:["61% Contracted Suppliers", "39% Unlisted Suppliers"]
+        };
+        var myDoughnutChart1 = new Chart(ctx1, {type:"doughnut", data: data1});
+        
+        //chart 2:
+        var ctx2 = document.getElementById("totalSpendingChart");
+        var data2 = {
+            datasets:[{
+                label:"Spending",
+                data:[10,10,8,12,11],
+                backgroundColor:"#e8144d"
+            }],
+            labels:["2015","2016","2017", "2018"]
+        };
+        var LineChart1 = new Chart(ctx2, {type:"line", data: data2, options:{
+            pointStyle:"circle",
+            legend: {display:false},
+            scales:{yAxis:[{display:false,gridLines:{display:false} }], xAxes:[{display:false,gridLines:{display:false} }]}
+        }});
+
+        //chart 3:
+        var ctx3 = document.getElementById("savingChart");
+        var data3 = {
+            datasets:[{
+                label:"Forgone Savings",
+                data:[10,11,15,12,9],
+                backgroundColor:"#80b6f4"
+            }],
+            labels:["2015","2016","2017", "2018"]
+        };
+        var LineChart3 = new Chart(ctx3, {type:"line", data: data3, options:{
+            pointStyle:"circle",
+            legend: {display:false},
+            scales:{yAxis:[{display:false,gridLines:{display:false} }], xAxes:[{display:false,gridLines:{display:false} }]}
+        }});
+
+        //chart 4:
+        var ctx4 = document.getElementById("foregoneSavings");
+        var data4 = {
+            datasets:[{
+                label:"Foregone Savings",
+                data:[10,14,16,13,20],
+                backgroundColor:"#fc8658"
+            }],
+            labels:["2015","2016","2017", "2018"]
+        };
+        var LineChart4 = new Chart(ctx4, {type:"line", data: data4, options:{
+            pointStyle:"circle",
+            legend: {display:false},
+            scales:{yAxis:[{display:false,gridLines:{display:false} }], xAxes:[{display:false,gridLines:{display:false} }]}
+        }});
+
+        //chart 5:
+        var ctx5 = document.getElementById("procurememtCycleChart");
+        var data5 = {
+            datasets:[{
+                label:"2019",
+                data:[{x: "Short", y: 16}, {x: "Medium", y: 48}, {x: "Long", y: 36}],
+                borderColor: "#fc8658",
+                backgroundColor:["#3ee074", "#4382b2", "#f44842"]
+            }],
+            labels:["Short 16%", "Medium 48%", "Long 36%"]
+        };
+        var BarChart5 = new Chart(ctx5, {type:"bar", data: data5, options: {
+            legend: {display:false},
+            scales:{yAxis:[{stacked: false, gridLines:{display:false} }], xAxes:[{stacked:false,gridLines:{display:false} }]}
+        }});
+    </script>
+    
+</body>
+
+</html>
