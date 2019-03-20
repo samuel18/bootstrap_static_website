@@ -70,46 +70,77 @@
                 <li class="breadcumb-item active"><a href="contact.html">Contact</a></li>
             </ol>
             <div class="row mb-4">
-                <div class="col-5 mx-auto">
+                <div class="col-8 mx-auto">
                     <form>
-                        <div class="form-group">
-                            <label for="txtName">Name:</label>
-                            <input type="text" id="txtName" class="form-control form-control-sm" placeholder="Name">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtName">Name:</label>
+                                <input type="text" id="txtName" class="form-control form-control-sm" placeholder="Name">
+                            </div>
+            
+                            <div class="form-group col-md-6">
+                                <label for="txtEmail">Email:</label>
+                                <input type="email" id="txtEmail" class="form-control form-control-sm" placeholder="Email"> 
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group-check col-md-6">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                    <label class="custom-control-label" for="customCheck">Receive News Letter</label>
+                                </div>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="form-check-label mr-2">Payment Mode</label>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="debitCard">
+                                    <label class="custom-control-label" for="debitCard">Credit Card</label>
+                                </div> 
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="rbCreditCard">
+                                    <label class="custom-control-label" for="rbCreditCard">Credit Card</label>
+                                </div> 
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example1">
+                                    <label class="custom-control-label" for="customRadio">PayPal</label>
+                                </div> 
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12" >
+                                <label for="txtComment">Comment:</label>
+                                <textarea" id="txtComment" class="form-control" placeholder="Comment"></textarea>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="txtEmail">Email:</label>
-                            <input type="email" id="txtEmail" class="form-control form-control-sm" placeholder="Email"> 
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="txtWebsite">Website</label>
+                                <input type="text" id="txtWebsite" class="form-control-plaintext" value="www.udemy.com">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="txtAttachment">Attachment</label>
+                                <input type="file" id="txtAttachment" class="form-control-file">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="drpExpertiseLevel">Expertise Level</label>
+                                <select id="drpExpertiseLevel" class="form-control form-control-sm">Please Select
+                                    <option>Beginner</option>
+                                    <option>Intermediate</option>
+                                    <option>Expert</option>
+                                </select>
+                            </div>
+
                         </div>
 
-                        <div class="form-group-check">
-                            <input type="checkbox" id="chkReceiveNewsLetter" class="form-control-input"> 
-                            <label for="chkReceiveNewsLetter" class="form-check-label">Receive News Letter</label>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="drpExpertiseLevel">Expertise Level</label>
-                            <select id="drpExpertiseLevel" class="form-control form-control-sm">Please Select
-                                <option>Beginner</option>
-                                <option>Intermediate</option>
-                                <option>Expert</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="txtComment">Comment:</label>
-                            <textarea" id="txtComment" class="form-control" placeholder="Comment"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="txtAttachment">Attachment</label>
-                            <input type="file" id="txtAttachment" class="form-control-file">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="txtWebsite">Website</label>
-                            <input type="text" id="txtWebsite" class="form-control-plaintext" value="www.udemy.com">
-                        </div>
                         <button type="submit" class="btn btn-success">Submit</button>
                         <a href="#" class="btn btn-danger">Cancel</a>
 
